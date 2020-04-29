@@ -24,9 +24,9 @@ build/nodes/runnodes
 2. flow start RespondQuoteFlow$Initiator linearId: "xxxxxxxxxx", price: 98.765
 3. flow start SettleQuoteFlow$Initiator linearId: "xxxxxxxxxx"
 #e.g.
-1. flow start NewQuoteFlow$Initiator rfqBank: BankA, customer: CompanyA, currencyPair: "AUD/USD", quantity: 126339806, buySell: "BUY"
-2. flow start RespondQuoteFlow$Initiator linearId: "abb22c73-62f0-4d10-8b67-77b1984ff8a7", price: 500.000
-3. flow start SettleQuoteFlow$Initiator linearId: "abb22c73-62f0-4d10-8b67-77b1984ff8a7"
+1. flow start NewQuoteFlow$Initiator rfqBank: JPMorgan, customer: Apple, currencyPair: "AUD/USD", quantity: 126339806, buySell: "BUY"
+2. flow start RespondQuoteFlow$Initiator linearId: "eea66c0e-a19d-4ef5-80b4-230ecbc629a0", price: 500.000
+3. flow start SettleQuoteFlow$Initiator linearId: "eea66c0e-a19d-4ef5-80b4-230ecbc629a0"
 
 # check
 run vaultQuery contractStateType: com.template.states.QuoteState
