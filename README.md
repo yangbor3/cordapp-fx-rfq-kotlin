@@ -16,22 +16,36 @@ https://www.smartsheet.com/rfq-process
 1. Go to project root folder, e.g. /Users/boyang/Documents/workspace/cordapp-fx-rfq-kotlin-v0.1
 2. gradlew clean deployNodes
 
-# start the nodes on Mac/Linux run the following command: 
+# start the nodes run the following command: 
 build/nodes/runnodes
 
 # run
 1. flow start NewQuoteFlow$Initiator rfqBank: BankA/BankB, customer: CompanyA, currencyPair: "xxx/yyy", quantity: xxxx, buySell: "xxx"
 2. flow start RespondQuoteFlow$Initiator linearId: "xxxxxxxxxx", price: 98.765
 3. flow start SettleQuoteFlow$Initiator linearId: "xxxxxxxxxx"
+
 #e.g.
-1. flow start NewQuoteFlow$Initiator rfqBank: JPMorgan, customer: Apple, currencyPair: "AUD/USD", quantity: 126339806, buySell: "BUY"
-2. flow start RespondQuoteFlow$Initiator linearId: "eea66c0e-a19d-4ef5-80b4-230ecbc629a0", price: 500.000
-3. flow start SettleQuoteFlow$Initiator linearId: "eea66c0e-a19d-4ef5-80b4-230ecbc629a0"
+1. flow start NewQuoteFlow$Initiator rfqBank: JPMorgan, customer: Apple, currencyPair: "USD/HKD", quantity: 126339806, buySell: "BUY"
+2. flow start RespondQuoteFlow$Initiator linearId: "0de7b490-68d0-43e5-b56e-dff7c803ecc3", price: 7.75
+3. flow start SettleQuoteFlow$Initiator linearId: "0de7b490-68d0-43e5-b56e-dff7c803ecc3"
 
 # check
 run vaultQuery contractStateType: com.template.states.QuoteState
+
+# Features completed in initial version
+1. Quote State 2. RFQContract with 6 rules in all
+3. New, Respond, Settle Flows
+4. Unit Test Cases
+5. Self testing and run on local machine
+
+# Features to be done
+6. Explore API & create UI with Spring Boot
+7. Create more test cases to improve test coverage
+8. Create more use cases, like Compliance / Regulatory requirements
+9. Deploy in cloud
+
     
-# problems:
+# Problems:
 1.Intellij IDEA error "Command line is too long":
 
 change file .idea\workspace.xml，find <component name="PropertiesComponent"> ， add one more line  <property name="dynamic.classpath" value="true" />

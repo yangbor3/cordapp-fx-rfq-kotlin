@@ -14,8 +14,6 @@ import net.corda.core.identity.Party
 data class QuoteState(
         val rfqBank: Party,
         val customer: Party,
-//        val transactionID: String,
-//        val time: String,
         val currencyPair: String,
         val quantity: Double,
         val buySell: String,
