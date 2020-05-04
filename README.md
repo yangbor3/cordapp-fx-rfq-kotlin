@@ -33,7 +33,8 @@ build/nodes/runnodes
 run vaultQuery contractStateType: com.template.states.QuoteState
 
 # Features completed in initial version
-1. Quote State 2. RFQContract with 6 rules in all
+1. Quote State 
+2. RFQContract with 6 rules in all
 3. New, Respond, Settle Flows
 4. Unit Test Cases
 5. Self testing and run on local machine
